@@ -16,7 +16,7 @@ def submit():
     input_data = [[float(a),float(b),float(c),float(d)]]
 
 
-    model=pickle.load(open(r"C:\Users\LENOVO\Desktop\App\LR.pkl","rb"))
+    model=pickle.load(open(r"LR.pkl","rb"))
     
     target=['setosa', 'versicolor', 'virginica']
     
@@ -26,4 +26,4 @@ def submit():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0" , debug=False , port=8080)
